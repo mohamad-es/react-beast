@@ -4,6 +4,7 @@ import { AlertDialogDemo } from "./components/ui/alert-dialog/AlertDialogDemo";
 import { BreadcrumbDemo } from "./components/ui/breadcrumb/BreadCrumbDemo";
 import { Button } from "./components/ui/button";
 import { CarouselDemo } from "./components/ui/carousel/CarouselDemo";
+import { ComboboxDemo } from "./components/ui/combobox";
 
 const AccordionGrid = () => {
   const data = [
@@ -119,6 +120,15 @@ const MultipleCarouselGrid = () => {
   );
 };
 
+const ComboboxGrid = () => {
+  return (
+    <div className="border rounded-2xl p-4">
+      <h2 className="text-2xl font-bold mb-5">Combobox</h2>
+      <ComboboxDemo />
+    </div>
+  );
+};
+
 function App() {
   return (
     <div>
@@ -131,6 +141,7 @@ function App() {
         <VerticalCarouselGrid />
         <MultipleCarouselGrid />
         <BreadCrumbGrid />
+        <ComboboxGrid />
       </div>
     </div>
   );
