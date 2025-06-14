@@ -1,6 +1,9 @@
 import { ModeToggle } from "./components/theme/mode-toggle";
 import { AccordionDemo } from "./components/ui/accordion/AccordionDemo";
+import { AlertDialogDemo } from "./components/ui/alert-dialog/AlertDialogDemo";
+import { BreadcrumbDemo } from "./components/ui/breadcrumb/BreadCrumbDemo";
 import { Button } from "./components/ui/button";
+import { CarouselDemo } from "./components/ui/carousel/CarouselDemo";
 
 const AccordionGrid = () => {
   const data = [
@@ -50,6 +53,72 @@ const ButtonGrid = () => {
   );
 };
 
+const AlertDialogGrid = () => {
+  const data = {
+    title: "Are you absolutely sure?",
+    button: "Show Dialog",
+    description:
+      "This action cannot be undone. This will permanently delete your account and remove your data from our servers.",
+    cancel: "cancel",
+    submit: "Continue",
+  };
+
+  return (
+    <div className="border rounded-2xl p-4">
+      <h2 className="text-2xl font-bold mb-5">Alert Dialog</h2>
+      <AlertDialogDemo
+        cancel={data.cancel}
+        submit={data.submit}
+        description={data.description}
+        button={data.button}
+        title={data.title}
+      />
+    </div>
+  );
+};
+
+const BreadCrumbGrid = () => {
+  return (
+    <div className="border rounded-2xl p-4">
+      <h2 className="text-2xl font-bold mb-5">BreadCrumb</h2>
+      <BreadcrumbDemo />
+    </div>
+  );
+};
+
+const CarouselGrid = () => {
+  return (
+    <div className="border rounded-2xl p-4">
+      <h2 className="text-2xl font-bold mb-5">Carousel</h2>
+      <div className="w-full flex gap-5 px-12">
+        <CarouselDemo />
+      </div>
+    </div>
+  );
+};
+
+const VerticalCarouselGrid = () => {
+  return (
+    <div className="border rounded-2xl p-4">
+      <h2 className="text-2xl font-bold mb-5">Vertical Carousel</h2>
+      <div className="w-full flex h-full items-center gap-5 pb-12">
+        <CarouselDemo carouselContentClassName="h-[200px]" carouselItemClassName="basis-1/3" orientation="vertical" />
+      </div>
+    </div>
+  );
+};
+
+const MultipleCarouselGrid = () => {
+  return (
+    <div className="border rounded-2xl p-4">
+      <h2 className="text-2xl font-bold mb-5">Multiple Carousel</h2>
+      <div className="w-full flex h-full items-center gap-5 p-12">
+        <CarouselDemo carouselItemClassName="basis-1/3" />
+      </div>
+    </div>
+  );
+};
+
 function App() {
   return (
     <div>
@@ -57,6 +126,11 @@ function App() {
       <div className="grid grid-cols-3 gap-4 p-10">
         <AccordionGrid />
         <ButtonGrid />
+        <AlertDialogGrid />
+        <CarouselGrid />
+        <VerticalCarouselGrid />
+        <MultipleCarouselGrid />
+        <BreadCrumbGrid />
       </div>
     </div>
   );
