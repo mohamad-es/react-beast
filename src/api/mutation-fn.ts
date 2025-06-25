@@ -16,7 +16,7 @@ export function MutationFn({ url }: Props) {
           url,
           data,
         });
-        return response;
+        return response.data;
       } catch (err) {
         const error = err as AxiosError<TBaseResponse<unknown>>;
         throw error;
