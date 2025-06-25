@@ -6,11 +6,9 @@ import { Button } from "@/components/ui/button";
 import { CardDemo } from "@/components/ui/card/card-demo";
 import { CarouselDemo } from "@/components/ui/carousel/carousel-demo";
 import { ComboboxDemo } from "@/components/ui/combobox/combobox-demo";
-import { ComboboxFormDemo } from "@/components/ui/combobox/combobox-form-demo";
 import { DropdownMenuDemo } from "@/components/ui/dropdown-menu/dropdown-menu-demo";
 import { FormDemo } from "@/components/ui/form/form-demo";
 import { InputDemo } from "@/components/ui/input/Input-demo";
-import { InputFormDemo } from "@/components/ui/input/Input-form-demo";
 import { SelectDemo } from "@/components/ui/select/select-demo";
 import { TabsDemo } from "@/components/ui/tabs/tabs-demo";
 import { TextareaDemo } from "@/components/ui/textarea/textarea-demo";
@@ -219,7 +217,6 @@ const DemoPage = () => {
       <div className="border rounded-xl p-4">
         <h2 className="text-2xl font-bold mb-5">Combobox</h2>
         <ComboboxDemo />
-        <ComboboxFormDemo />
       </div>
     );
   };
@@ -239,7 +236,6 @@ const DemoPage = () => {
         <h2 className="text-2xl font-bold mb-5">Input</h2>
         <div className="flex flex-col gap-5">
           <InputDemo />
-          <InputFormDemo />
         </div>
       </div>
     );
@@ -323,4 +319,3 @@ const DemoPage = () => {
 };
 
 export default DemoPage;
-
