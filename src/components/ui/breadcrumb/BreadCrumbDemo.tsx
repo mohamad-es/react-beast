@@ -1,4 +1,3 @@
-
 import {
   Breadcrumb,
   BreadcrumbEllipsis,
@@ -14,7 +13,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-// import { Link } from "react-router";
 
 export function BreadcrumbDemo() {
   return (
@@ -22,7 +20,7 @@ export function BreadcrumbDemo() {
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink asChild>
-            {/* <Link to="/">Home</Link> */}
+            <a href="/">Home</a>
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
@@ -42,7 +40,7 @@ export function BreadcrumbDemo() {
         <BreadcrumbSeparator />
         <BreadcrumbItem>
           <BreadcrumbLink asChild>
-            {/* <Link to="/docs/components">Components</Link> */}
+            <a href="/docs/components">Components</a>
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />

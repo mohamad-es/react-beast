@@ -25,10 +25,10 @@ export function AlertDialogDemo({ title, button, cancel, description, submit }: 
       <AlertDialogTrigger asChild>
         <Button variant="outline">{button}</Button>
       </AlertDialogTrigger>
-      <AlertDialogContent>
+      <AlertDialogContent dir="ltr">
         <AlertDialogHeader>
-          <AlertDialogTitle>{title}</AlertDialogTitle>
-          <AlertDialogDescription>{description}</AlertDialogDescription>
+          <AlertDialogTitle className="text-end">{title}</AlertDialogTitle>
+          <AlertDialogDescription className="text-end">{description}</AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>{cancel}</AlertDialogCancel>

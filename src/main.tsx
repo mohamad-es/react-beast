@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { ThemeProvider } from "./components/shared/theme/theme-provider.tsx";
+import { ThemeProvider } from "./components/shared/dark-mode/theme-provider.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import HomePage from "./features/home/HomePage.tsx";
 

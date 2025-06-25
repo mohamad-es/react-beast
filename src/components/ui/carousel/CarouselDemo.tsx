@@ -9,7 +9,7 @@ type props = {
 
 export function CarouselDemo({ orientation, carouselItemClassName, carouselContentClassName }: props) {
   return (
-    <Carousel orientation={orientation} className="w-full">
+    <Carousel dir="ltr" orientation={orientation} className="w-full">
       <CarouselContent className={carouselContentClassName}>
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem className={`${carouselItemClassName}`} key={index}>

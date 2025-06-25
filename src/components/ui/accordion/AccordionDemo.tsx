@@ -13,7 +13,7 @@ export function AccordionDemo({ list, defaultValue }: props) {
   return (
     <Accordion type="single" collapsible className="w-full" defaultValue={defaultValue || undefined}>
       {list.map((item) => (
-        <AccordionItem value={item.value}>
+        <AccordionItem key={item.title} value={item.value}>
           <AccordionTrigger>{item.title}</AccordionTrigger>
           <AccordionContent className="flex flex-col gap-4 text-balance">{item.content}</AccordionContent>
         </AccordionItem>

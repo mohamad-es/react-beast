@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { ModeToggle } from "../theme/mode-toggle";
+import { ModeToggle } from "../dark-mode/mode-toggle";
 
 const Header = () => {
   const nav = [
