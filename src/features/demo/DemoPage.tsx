@@ -1,20 +1,20 @@
-import { AccordionDemo } from "@/components/ui/accordion/AccordionDemo";
-import { AlertDialogDemo } from "@/components/ui/alert-dialog/AlertDialogDemo";
-import { BadgeDemo } from "@/components/ui/badge/BadgeDemo";
-import { BreadcrumbDemo } from "@/components/ui/breadcrumb/BreadCrumbDemo";
+import { AccordionDemo } from "@/components/ui/accordion/accordion-demo";
+import { AlertDialogDemo } from "@/components/ui/alert-dialog/alert-dialog-demo";
+import { BadgeDemo } from "@/components/ui/badge/badge-demo";
+import { BreadcrumbDemo } from "@/components/ui/breadcrumb/breadcrumb-demo";
 import { Button } from "@/components/ui/button";
-import { CardDemo } from "@/components/ui/card/CardDemo";
-import { CarouselDemo } from "@/components/ui/carousel/CarouselDemo";
-import { ComboboxDemo } from "@/components/ui/combobox/ComboboxDemo";
-import { ComboboxForm } from "@/components/ui/combobox/ComboboxForm";
-import { DropdownMenuDemo } from "@/components/ui/dropdown-menu/DropdownMenuDemo";
-import { FormDemo } from "@/components/ui/form/FormDemo";
-import { InputDemo } from "@/components/ui/input/InputDemo";
-import { InputForm } from "@/components/ui/input/InputForm";
-import { SelectDemo } from "@/components/ui/select/SelectDemo";
-import { TabsDemo } from "@/components/ui/tabs/TabsDemo";
-import { TextareaDemo } from "@/components/ui/textarea/TextareaDemo";
-import { TooltipDemo } from "@/components/ui/tooltip/TooltipDemo";
+import { CardDemo } from "@/components/ui/card/card-demo";
+import { CarouselDemo } from "@/components/ui/carousel/carousel-demo";
+import { ComboboxDemo } from "@/components/ui/combobox/combobox-demo";
+import { ComboboxFormDemo } from "@/components/ui/combobox/combobox-form-demo";
+import { DropdownMenuDemo } from "@/components/ui/dropdown-menu/dropdown-menu-demo";
+import { FormDemo } from "@/components/ui/form/form-demo";
+import { InputDemo } from "@/components/ui/input/Input-demo";
+import { InputFormDemo } from "@/components/ui/input/Input-form-demo";
+import { SelectDemo } from "@/components/ui/select/select-demo";
+import { TabsDemo } from "@/components/ui/tabs/tabs-demo";
+import { TextareaDemo } from "@/components/ui/textarea/textarea-demo";
+import { TooltipDemo } from "@/components/ui/tooltip/tooltip-demo";
 
 const DemoPage = () => {
   const ThemeGrid = () => {
@@ -219,7 +219,7 @@ const DemoPage = () => {
       <div className="border rounded-xl p-4">
         <h2 className="text-2xl font-bold mb-5">Combobox</h2>
         <ComboboxDemo />
-        <ComboboxForm />
+        <ComboboxFormDemo />
       </div>
     );
   };
@@ -239,7 +239,7 @@ const DemoPage = () => {
         <h2 className="text-2xl font-bold mb-5">Input</h2>
         <div className="flex flex-col gap-5">
           <InputDemo />
-          <InputForm />
+          <InputFormDemo />
         </div>
       </div>
     );
