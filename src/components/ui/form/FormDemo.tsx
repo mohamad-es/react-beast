@@ -7,14 +7,12 @@ import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Check, ChevronsUpDown } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { InputFormField } from "../input/Input-form-field";
-import { age, city, language, username } from "@/lib/validation";
-import { SelectFormField } from "../select/select-form-field";
-import { ComboboxFormField } from "../combobox/combobox-form-field";
 
 const languages = [
   { label: "English", value: "en" },
@@ -29,16 +27,23 @@ const languages = [
 ] as const;
 
 const FormSchema = z.object({
-  username,
-  age,
-  city,
-  language,
+  username: z.string().min(2, {
+    message: "Username must be at least 2 characters.",
+  }),
+  email: z.string().email({ message: "Please enter a valid email" }),
+  age: z.number({ invalid_type_error: "Age is required" }).min(18, { message: "You must be at least 18 years old." }),
+  city: z.string({
+    required_error: "Please select a city",
+  }),
+  language: z.string({
+    required_error: "Please select a language.",
+  }),
 });
 
 export function FormDemo() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
-    defaultValues: { username: "", age: 18 },
+    defaultValues: { username: "", email: "", age: 18 },
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
@@ -54,26 +59,78 @@ export function FormDemo() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
-        <InputFormField control={form.control} name="username" label="Username" placeholder="username" />
+        <FormField
+          control={form.control}
+          name="username"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Username</FormLabel>
+              <FormControl>
+                <Input placeholder="shadcn" {...field} />
+              </FormControl>
+              <FormDescription>This is your public display name.</FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-        <InputFormField
-          type="number"
+        <FormField
+          control={form.control}
+          name="email"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Email</FormLabel>
+              <FormControl>
+                <Input placeholder="you@example.com" {...field} />
+              </FormControl>
+              <FormDescription>Your contact email.</FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
           control={form.control}
           name="age"
-          description=""
-          label="Age"
-          placeholder="Enter your age"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Age</FormLabel>
+              <FormControl>
+                <Input
+                  placeholder="Enter your age"
+                  type="number"
+                  {...field}
+                  onChange={(e) => field.onChange(+e.target.value)} // convert to number
+                />
+              </FormControl>
+              <FormDescription>Your age in years.</FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
         />
 
-        <SelectFormField
+        <FormField
           control={form.control}
           name="city"
-          placeholder="Select a city"
-          data={[{ title: "Vegas", value: "1" }]}
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>City</FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a verified email to display" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="1">Texas</SelectItem>
+                  <SelectItem value="2">Vegas</SelectItem>
+                  <SelectItem value="3">LA</SelectItem>
+                </SelectContent>
+              </Select>
+              <FormMessage />
+            </FormItem>
+          )}
         />
-
-
-        <ComboboxFormField form={form} labelKey={""} data={languages} />
 
         <FormField
           control={form.control}

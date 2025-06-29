@@ -1,18 +1,19 @@
-import { AccordionDemo } from "@/components/ui/accordion/accordion-demo";
-import { AlertDialogDemo } from "@/components/ui/alert-dialog/alert-dialog-demo";
-import { BadgeDemo } from "@/components/ui/badge/badge-demo";
-import { BreadcrumbDemo } from "@/components/ui/breadcrumb/breadcrumb-demo";
+import { AccordionDemo } from "@/components/ui/accordion/AccordionDemo";
+import { AlertDialogDemo } from "@/components/ui/alert-dialog/AlertDialogDemo";
+import { BadgeDemo } from "@/components/ui/badge/BadgeDemo";
+import { BreadcrumbDemo } from "@/components/ui/breadcrumb/BreadCrumbDemo";
 import { Button } from "@/components/ui/button";
-import { CardDemo } from "@/components/ui/card/card-demo";
-import { CarouselDemo } from "@/components/ui/carousel/carousel-demo";
-import { ComboboxDemo } from "@/components/ui/combobox/combobox-demo";
-import { DropdownMenuDemo } from "@/components/ui/dropdown-menu/dropdown-menu-demo";
-import { FormDemo } from "@/components/ui/form/form-demo";
-import { InputDemo } from "@/components/ui/input/Input-demo";
-import { SelectDemo } from "@/components/ui/select/select-demo";
-import { TabsDemo } from "@/components/ui/tabs/tabs-demo";
-import { TextareaDemo } from "@/components/ui/textarea/textarea-demo";
-import { TooltipDemo } from "@/components/ui/tooltip/tooltip-demo";
+import { CardDemo } from "@/components/ui/card/CardDemo";
+import { CarouselDemo } from "@/components/ui/carousel/CarouselDemo";
+import { ComboboxDemo } from "@/components/ui/combobox/ComboboxDemo";
+import { DropdownMenuDemo } from "@/components/ui/dropdown-menu/DropdownMenuDemo";
+import { FormDemo } from "@/components/ui/form/FormDemo";
+import { InputDemo } from "@/components/ui/input/InputDemo";
+import { SelectDemo } from "@/components/ui/select/SelectDemo";
+import { TabsDemo } from "@/components/ui/tabs/TabsDemo";
+import { TextareaDemo } from "@/components/ui/textarea/TextareaDemo";
+import { TooltipDemo } from "@/components/ui/tooltip/TooltipDemo";
+
 
 const DemoPage = () => {
   const ThemeGrid = () => {
