@@ -1,18 +1,16 @@
 import { Outlet } from "react-router";
-import Footer from "./Footer";
 import Header from "./Header";
-import { SidebarProvider } from "@/components/ui/sidebar";
-import { AppSidebar } from "./AppSidebar";
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import { AppSidebar } from "../sidebar/AppSidebar";
 
 const Layout = () => {
   return (
     <SidebarProvider>
       <AppSidebar />
-      <div>
+      <SidebarInset>
         <Header />
         <Outlet />
-        <Footer />
-      </div>
+      </SidebarInset>
     </SidebarProvider>
   );
 };
