@@ -9,6 +9,7 @@ import "./index.css";
 import Layout from "./components/shared/layout/Layout.tsx";
 import DemoPage from "./features/demo/DemoPage.tsx";
 import { Toaster } from "sonner";
+import LoginPage from "./features/login/page.tsx";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
         Component: DemoPage,
       },
     ],
+  },
+  {
+    path: "/login",
+    Component: LoginPage,
   },
 ]);
 
