@@ -1,6 +1,6 @@
+import type { TBaseResponse } from "@/types/response";
 import { axiosInstance } from "./axios-instance";
-import { AxiosError, AxiosResponse } from "axios";
-import { TBaseResponse } from "@/types/response";
+import { AxiosError, type AxiosResponse,  } from "axios";
 
 type props = {
   url: string;

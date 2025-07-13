@@ -3,6 +3,18 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
+@font-face {
+  font-family: "alibaba-regular";
+  src: url("/public/font/alibaba-regular.ttf");
+}
+
+@font-face {
+  font-family: "alibaba-bold";
+  src: url("/public/font/alibaba-bold.ttf");
+}
+
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -139,10 +151,17 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: "alibaba-regular";
   }
 
+  .lucide-chevrons-right,
+  .lucide-chevrons-left,
   .lucide-chevron-right,
-  lucide-chevron-right {
+  .lucide-chevron-left {
     rotate: 180deg;
+  }
+
+  .alibaba-bold {
+    font-family: "alibaba-bold";
   }
 }

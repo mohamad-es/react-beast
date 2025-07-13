@@ -7,7 +7,7 @@ type props = {
   params?: unknown;
 };
 
-export function ReactQueryGet({ url, params, queryKey }: props) {
+export function TanstackQuery({ url, params, queryKey }: props) {
   const query = useQuery({
     queryKey,
     queryFn: async () => await AxiosGet({ url, params }),

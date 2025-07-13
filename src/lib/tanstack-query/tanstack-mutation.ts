@@ -5,7 +5,7 @@ type Props = {
   url: string;
 };
 
-export function ReactQueryPost({ url }: Props) {
+export function TanstackMutation({ url }: Props) {
   const mutation = useMutation({
     mutationFn: async (data: Record<string, unknown>) => await AxiosPost({ url, data }),
   });

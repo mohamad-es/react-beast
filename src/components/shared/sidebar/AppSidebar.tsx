@@ -1,13 +1,13 @@
 "use client";
 
 import * as React from "react";
-import { BookOpen, Bot, Frame, LayoutDashboardIcon, Map, PieChart, Settings2, SquareTerminal } from "lucide-react";
 
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarRail } from "@/components/ui/sidebar";
 import { NavMain } from "./nav-main";
-import { NavProjects } from "./nav-projects";
 import { NavUser } from "./nav-user";
 import { ModeToggle } from "../dark-mode/mode-toggle";
+import { BookOpen, Bot, LayoutDashboardIcon, Map, PieChart, Settings2, SquareTerminal, User } from "lucide-react";
+import { NavProjects } from "./nav-projects";
 
 // This is sample data.
 const data = {
@@ -105,14 +105,14 @@ const data = {
   ],
   projects: [
     {
-      name: "Dashboard",
+      name: "داشبورد",
       url: "/",
       icon: LayoutDashboardIcon,
     },
     {
-      name: "Design Engineering",
-      url: "#",
-      icon: Frame,
+      name: "کاربران",
+      url: "/users",
+      icon: User,
     },
     {
       name: "Sales & Marketing",
