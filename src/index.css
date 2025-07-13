@@ -140,4 +140,9 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .lucide-chevron-right,
+  lucide-chevron-right {
+    rotate: 180deg;
+  }
 }
