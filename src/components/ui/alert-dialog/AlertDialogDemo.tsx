@@ -11,28 +11,23 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 
-type props = {
-  button: string;
-  title: string;
-  description: string;
-  cancel: string;
-  submit: string;
-};
-
-export function AlertDialogDemo({ title, button, cancel, description, submit }: props) {
+export function AlertDialogDemo() {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <Button variant="outline">{button}</Button>
+        <Button variant="outline">Show Dialog</Button>
       </AlertDialogTrigger>
-      <AlertDialogContent dir="ltr">
+      <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle className="text-end">{title}</AlertDialogTitle>
-          <AlertDialogDescription className="text-end">{description}</AlertDialogDescription>
+          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+          <AlertDialogDescription>
+            This action cannot be undone. This will permanently delete your account and remove your data from our
+            servers.
+          </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel>{cancel}</AlertDialogCancel>
-          <AlertDialogAction>{submit}</AlertDialogAction>
+          <AlertDialogCancel>Cancel</AlertDialogCancel>
+          <AlertDialogAction>Continue</AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>

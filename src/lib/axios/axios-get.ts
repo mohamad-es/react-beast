@@ -1,6 +1,5 @@
-import type { TBaseResponse } from "@/types/response";
 import { axiosInstance } from "./axios-instance";
-import { AxiosError, type AxiosResponse,  } from "axios";
+import { AxiosError } from "axios";
 
 type props = {
   url: string;
@@ -9,14 +8,14 @@ type props = {
 
 export default async function AxiosGet({ url, params }: props) {
   try {
-    const response: AxiosResponse<TBaseResponse<unknown>> = await axiosInstance({
-      method: "POST",
+    const response = await axiosInstance({
+      method: "GET",
       url,
       params,
     });
+
     return response.data;
-  } catch (err) {
-    const error = err as AxiosError<TBaseResponse<unknown>>;
-    throw error;
+  } catch (error) {
+    throw error as AxiosError;
   }
 }
